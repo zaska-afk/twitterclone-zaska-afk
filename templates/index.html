@@ -1,0 +1,35 @@
+<div>
+<button><a href="/">Home</a></button>
+<button><a href="/login"/>Log In</a></button>
+<button><a href="/signup/">signup</a></button>
+<button><a href="/logout/">Log Out</a></button>
+<button><a href="/notifications/{{request.user.id}}">Notifications</a></button>
+<br />
+<br />
+<div>
+
+<h3> Twitter CLONE </h3>
+<br>
+
+<h2>Hello {{request.user.username}}</h2>
+
+<button><a href="/addtweet/">Tweet</a></button>
+<button><a href="/user/{{ request.user.id }}">My Profile</a></button>
+
+<br />
+<br />
+
+<p>
+    <h4> Tweets </h4>
+        
+        <ul>
+            {%for tweet in tweets %}
+                <br>
+                <h3>{{tweet.username}} <a href="/user/{{ tweet.author.id }}">@{{ tweet.author.username }}</a> says<h3>
+                <h4><a href="/tweet/{{ tweet.id }}">"{{tweet.body}}"</a></h4>
+                <p>Date: {{tweet.date}}</p>
+                <br>
+
+            {% endfor %}    
+        </ul>
+</p>

@@ -1,0 +1,22 @@
+<div>
+<button><a href="/">Home</a></button>
+<button><a href="/login"/>Log In</a></button>
+<button><a href="/signup/">signup</a></button>
+<button><a href="/logout/">Log Out</a></button>
+<br />
+<br />
+<div>
+
+<h3> Tweet Info </h3>
+
+
+<p>
+    <ul>
+        <br>
+        <li>Tweet: {{tweet.body}}</li>
+        <li>Username: {{tweet.username}} <a href="/user/{{ tweet.author.id }}">@{{ tweet.author.username }}</a></li>
+        <li>Date: {{tweet.date}}</li>
+        <li>ID: {{tweet.id}}</li>
+        <br>
+    </ul>
+</p>

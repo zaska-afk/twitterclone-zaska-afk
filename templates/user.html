@@ -1,0 +1,14 @@
+<button><a href="/">Home</a></button>
+<button><a href="/login">Log In</a></button>
+<button><a href="/logout">Log Out</a></button>
+<br />
+<br />
+
+<h2>{{ user.display_name }}'s Profile</h2>
+
+<h3>Following {{ user.following.count }} people!</h3>
+<h3>Number of Tweets: {{ tweets.count }}</h3>
+
+<br>
+<button><a href="/follow/{{user.id}}">Follow</a></li></button>
+<button><a href="/unfollow/{{user.id}}">Unfollow</a></li></button>
